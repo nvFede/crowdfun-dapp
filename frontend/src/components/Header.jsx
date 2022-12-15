@@ -17,17 +17,17 @@ const Header = () => {
         justify-between items-center px-4 shadow-lg`}
     >
       <div className={`flex-1/3`}>
-        <h1 className="text-2xl text-[#f213d4]">
-          Crowd<span className="text-[#f211b2]">Fun</span>
+        <h1 className="text-2xl text-pink-600">
+          Crowd<span className="text-pink-800">Fun</span>
         </h1>
       </div>
       <div className={`flex-1/3`}>
         <nav>
-          <ul className="flex gap-5 ">
+          <ul className="flex gap-2 ">
             {navlinks.map((link) => (
               <li
                 key={link.name}
-                className={`flex p-4 ${
+                className={`flex gap-3 ${
                   isActive === link.name 
                 }`}
                 onClick={() => {
@@ -39,7 +39,7 @@ const Header = () => {
                 {" "}
                 <p
                   className={`ml-[20px] font-epilogue font-semibold text-[14px] ${
-                    isActive === link.name ? "text-[#f213d4]" : "text-[#808191] cursor-pointer"
+                    isActive === link.name ? "text-pink-600" : "text-gray-300 cursor-pointer"
                   }`}
                 >
                   {link.name}
@@ -50,7 +50,7 @@ const Header = () => {
         </nav>
       </div>
       <div className={`flex-1/3`}>
-        <ConnectWallet accentColor="#f213a4" colorMode="dark" />
+        <ConnectWallet accentColor="#db2777" colorMode="dark" />
       </div>
     </header>
   );
